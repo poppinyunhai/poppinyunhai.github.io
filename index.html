@@ -233,6 +233,104 @@
             
               
                 
+                <a class="post-title-link" href="/2016/11/22/rails-update-file/" itemprop="url">
+                  Rails HTML 直接上传文件
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-22T21:43:25+08:00" content="2016-11-22">
+              2016-11-22
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>一些情况下，我们需要上传一些文件到指定目录下，但是呢，我们又不想使用 carrierwave 或者 paperclip 这些 Gem 直接上代码</p>
+<p><code>html</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;form action=&apos;/upload_file&apos; methods=&apos;post&apos; enctype=&apos;multipart/form-data&apos;&gt;</div><div class="line">  &lt;input name=&apos;somefile&apos; type=&apos;file&apos;&gt;</div><div class="line">  &lt;input type=&apos;button&apos; vlaue=&apos;提交&apos;&gt;</div><div class="line">&lt;/form&gt;</div></pre></td></tr></table></figure>
+<p><code>Controller</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">class Test</div><div class="line">  def upload_file</div><div class="line">    name =  params[&apos;somefile&apos;].original_filename</div><div class="line">    directory = &quot;tmp/uploads&quot; #文件存储位置</div><div class="line">    path = File.join(directory, name)</div><div class="line">    File.open(path, &quot;wb&quot;) &#123; |f| f.write(params[&apos;bank_list&apos;].read) &#125;</div><div class="line">  end</div><div class="line">end</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/11/09/Ruby-IO-读取文件指定编码集/" itemprop="url">
                   Ruby IO 读取文件指定编码集
                 </a>
@@ -442,7 +540,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
