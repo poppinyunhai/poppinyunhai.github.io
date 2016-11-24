@@ -233,6 +233,102 @@
             
               
                 
+                <a class="post-title-link" href="/2016/11/24/lookup-context-render/" itemprop="url">
+                  Rails 检查 render 文件路径
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-24T23:02:15+08:00" content="2016-11-24">
+              2016-11-24
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>在代码里使用 <code>render</code> 方法引入 <code>html file json</code>… 如果有路径不存在，就会报错。一般我们引入的文件，路径是静态的，所以不会出现什么问题。<br>如果我们需要动态引入一个文件，我们可以使用</p>
+<p><code>lookup_context.find_all(&#39;file_path&#39;)</code> </p>
+<p>这个方法，的返回值，如果文件存在，返回文件路径，如果不存在，返回一个空数组。如果在方法后加上 <code>any?</code> 如果不存在 则返回 false.</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/11/22/rails-update-file/" itemprop="url">
                   Rails HTML 直接上传文件
                 </a>
@@ -540,7 +636,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
